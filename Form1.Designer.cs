@@ -34,6 +34,9 @@
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.메모장정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.저장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +53,10 @@
             // 
             // 파일ToolStripMenuItem
             // 
+            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.열기ToolStripMenuItem,
+            this.저장ToolStripMenuItem,
+            this.끝내기ToolStripMenuItem});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.파일ToolStripMenuItem.Text = "파일";
@@ -65,7 +72,7 @@
             // 메모장정보ToolStripMenuItem
             // 
             this.메모장정보ToolStripMenuItem.Name = "메모장정보ToolStripMenuItem";
-            this.메모장정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.메모장정보ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.메모장정보ToolStripMenuItem.Text = "메모장 정보";
             // 
             // textBox1
@@ -75,6 +82,26 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(800, 425);
             this.textBox1.TabIndex = 1;
+            // 
+            // 열기ToolStripMenuItem
+            // 
+            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.열기ToolStripMenuItem.Text = "열기";
+            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.열기ToolStripMenuItem_Click_1);
+            // 
+            // 저장ToolStripMenuItem
+            // 
+            this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.저장ToolStripMenuItem.Text = "저장";
+            this.저장ToolStripMenuItem.Click += new System.EventHandler(this.저장ToolStripMenuItem_Click);
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
             // 
             // Form1
             // 
@@ -87,6 +114,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "메모장";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -101,6 +129,9 @@
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 메모장정보ToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem 열기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 저장ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
     }
 }
 
