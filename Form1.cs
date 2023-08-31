@@ -25,14 +25,24 @@ namespace MyNotepad
 
         private void 열기ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            openFileDialog.ShowDialog(this);
-            textBox1.Text = File.ReadAllText(OpenFileDialog.FileName);
+            openFileDialog1.ShowDialog(this);
+            textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
         }
 
         private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog(this);
-            File.WriteAllText(saveFileDialog1);
+            File.WriteAllText(saveFileDialog1.FileName, textBox1.Text);
+        }
+
+        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void 메모장정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("제작자 : 양다연", "메모장 정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
